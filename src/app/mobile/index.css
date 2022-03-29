@@ -1,0 +1,31 @@
+.menu-sidebar .adm-list {
+  --border-inner: 0px;
+  --border-top: 0px;
+  --border-bottom: 0px;
+}
+
+.menu-sidebar .adm-list-header {
+  color: #fffae9;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.menu-sidebar .adm-list-body {
+  background-color: #38aea9;
+  color: #fffae9;
+  font-size: 16px;
+}
+
+.adm-tab-bar-item {
+  color: #3b8f8b;
+}
+
+.adm-tab-bar-item-active {
+  color: #fff;
+}
+
+.adm-form .adm-list-header {
+  font-size: larger;
+  font-weight: 700;
+  color: black;
+}
