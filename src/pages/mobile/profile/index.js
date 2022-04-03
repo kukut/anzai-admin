@@ -38,13 +38,13 @@ const Profile = () => {
         User
       </NavBar>
       <Card style={{margin: '25px 8px 0px'}}>
-        <Form>
+        <Form initialValues={{username: "user_demo", password: "1234"}}>
           <Form.Header>Profile</Form.Header>
-          <Form.Item label="Username">
-            <Input value="user_demo" />
+          <Form.Item label="Username" name="username">
+            <Input />
           </Form.Item>
-          <Form.Item label="Password">
-            <Input value="1234" />
+          <Form.Item label="Password" name="password">
+            <Input />
           </Form.Item>
         </Form>
       </Card>

@@ -11,6 +11,7 @@ const Menu3 = () => {
       >
         Menu 3
       </NavBar>
+      <p>Content</p>
     </div>
   )
 }

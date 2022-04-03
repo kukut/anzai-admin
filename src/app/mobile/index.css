@@ -29,3 +29,16 @@
   font-weight: 700;
   color: black;
 }
+
+.adm-list-item:active {
+  border-radius: 20px;
+  color: #0fbcf9;
+  font-weight: 700;
+}
+
+.adm-list-item.adm-list-item-active {
+  border-radius: 50px;
+  background-color: #e4efc1;
+  font-weight: 700;
+  color: #0fbcf9;
+}

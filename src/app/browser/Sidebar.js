@@ -28,13 +28,7 @@ const Sidebar = () => {
     }
 
     useEffect(() => {
-        // let siderDom = document.querySelector("aside.ant-layout-sider");
-        // if(collapseSidebar){
-        //     siderDom.setAttribute("style", "overflow: auto; height: calc(100vh - 64px); position: fixed; left: 0px; top: 64px; bottom: 0px; flex: 0 0 80px; max-width: 260px; min-width: 260px; width: 260px;")
-            
-        // }else {
-        //     siderDom.setAttribute("style", "overflow: auto; height: calc(100vh - 64px); position: fixed; left: 0px; top: 64px; bottom: 0px; flex: 0 0 80px; max-width: 80px; min-width: 80px; width: 80px;")
-        // }
+ 
     }, [collapseSidebar])
 
     const menu = (

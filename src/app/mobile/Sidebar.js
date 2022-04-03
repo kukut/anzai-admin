@@ -1,12 +1,26 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate, useLocation} from 'react-router-dom'
 import {Popup, List} from 'antd-mobile';
+import {useDispatch} from 'react-redux'
 import {ApartmentOutlined, BranchesOutlined, CalculatorOutlined, ClearOutlined} from '@ant-design/icons';
 
 
 const Sidebar = ({visible, setVisible}) => {
     
     const navigate = useNavigate(); 
+    // const dispatch = useDispatch()
+    const location = useLocation();
+    const pathname = location.pathname.substr(1).split("/")
+
+    
+    let selectedMenu = ''
+    if(pathname.length >= 2){
+        selectedMenu = `/${pathname[0]}/${pathname[1]}`
+    }else {
+        selectedMenu = `/${pathname[0]}`
+    }
+
+    console.log({selectedMenu})
 
     return (
         <Popup
@@ -19,25 +33,37 @@ const Sidebar = ({visible, setVisible}) => {
             <div style={{height: 65, marginLeft: 5, marginTop: 15}}>
                 <img alt="logo" src="/logo-sider.png" width="150px"/>
             </div>
-            <List>
+            <List style={{"--active-background-color": "#E4EFC1"}}>
                 <List.Item onClick={() => {
                     navigate("/menu-1")
                     setVisible(false)
-                }}  prefix={<ApartmentOutlined />}>Menu 1</List.Item>
+                }} prefix={<ApartmentOutlined />}
+                    arrow={selectedMenu !== '/menu-1' }
+                    className={selectedMenu === '/menu-1' ? 'adm-list-item-active' : null}
+                >Menu 1</List.Item>
             </List>
-            <List header="Grouped Menu">
+            <List header="Grouped Menu"  style={{"--active-background-color": "#E4EFC1"}}>
                 <List.Item onClick={() => {
                     navigate("/group-menu/menu-2")
                     setVisible(false)
-                }} prefix={<BranchesOutlined />}>Menu 2</List.Item>
+                }} prefix={<BranchesOutlined />}
+                    arrow={selectedMenu !== '/group-menu/menu-2' }
+                    className={selectedMenu === '/group-menu/menu-2' ? 'adm-list-item-active' : null}
+                >Menu 2</List.Item>
                 <List.Item onClick={() => {
                     navigate("/group-menu/menu-3")
                     setVisible(false)
-                }} prefix={<CalculatorOutlined />}>Menu 3</List.Item>
+                }} prefix={<CalculatorOutlined />}
+                    arrow={selectedMenu !== '/group-menu/menu-3' }
+                    className={selectedMenu === '/group-menu/menu-3' ? 'adm-list-item-active' : null}
+                >Menu 3</List.Item>
                 <List.Item onClick={() => {
                     navigate("/group-menu/menu-4")
                     setVisible(false)
-                }} prefix={<ClearOutlined />}>Menu 4</List.Item>
+                }} prefix={<ClearOutlined />}
+                    arrow={selectedMenu !== '/group-menu/menu-4' }
+                    className={selectedMenu === '/group-menu/menu-4' ? 'adm-list-item-active' : null}
+                >Menu 4</List.Item>
                 
             </List>
             

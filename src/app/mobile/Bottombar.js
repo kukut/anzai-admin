@@ -31,7 +31,7 @@ const Bottombar = () => {
 
   
   return (
-    <div style={{flex: 0, background: '#05595B'}}>
+    <div style={{background: '#05595B', position: 'fixed', bottom: 0, width: '100vw'}}>
       <TabBar onChange={handleChange} activeKey={activeKey}>
         <TabBar.Item key="dashboard" icon={<AppstoreOutline />} title="Dashboard" />
         <TabBar.Item key="user" icon={<UserCircleOutline />} title="User" />

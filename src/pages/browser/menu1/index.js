@@ -11,8 +11,9 @@ const Menu1 = () => {
         
         <Breadcrumb.Item>Menu 1</Breadcrumb.Item>
       </Breadcrumb>
-      <Card>
+      <Card style={{borderRadius: 10}}>
         <h1>Menu 1</h1>
+        
       </Card>
     </div>
   )

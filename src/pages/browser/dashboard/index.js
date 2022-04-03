@@ -10,7 +10,7 @@ const Dashboard = () => {
       <Breadcrumb separator=">" style={{marginBottom: 8}}>
         <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
       </Breadcrumb>
-      <Card>
+      <Card style={{borderRadius: 10}}>
         <h1>Dashboard</h1>
       </Card>
     </div>

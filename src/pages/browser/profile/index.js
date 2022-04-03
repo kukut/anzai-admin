@@ -14,7 +14,7 @@ const Profile = () => {
         <Breadcrumb.Item><Link to='/dashboard'>Dashboard</Link></Breadcrumb.Item>
         <Breadcrumb.Item>Profile</Breadcrumb.Item>
       </Breadcrumb>
-      <Card>
+      <Card style={{borderRadius: 10}}>
         <h1>Profile</h1>
         <Form initialValues={{username: "user_demo", password: "1234"}}>
           <Form.Item name="username" label="Username" {...formItemLayout}>

@@ -4,7 +4,7 @@ import {Outlet} from 'react-router-dom'
 
 const Content = () => {
   return (
-    <div style={{flex: 1, display: 'flex', background: "#F0F2F5"}}>
+    <div style={{background: "#F0F2F5", maxHeight: 'calc(100vh - 50px)', minHeight: 'calc(100vh - 50px)', overflow: 'scroll'}}>
         <Outlet />
     </div>
   )
