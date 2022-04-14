@@ -5,4 +5,4 @@ Admin Template build with [Reactjs](https://reactjs.org/), using library:
 * [React Redux](https://react-redux.js.org/) for state management
 * [React Router](https://reactrouter.com/docs/en/v6) for routing
 
-### [Demo](https://anzai.asyki.xyz/)
+### [Demo](https://anzai.agustiansa.my.id/)
