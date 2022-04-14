@@ -33,13 +33,6 @@ const Topbar = () => {
 
   const handleOpenSidebar = () => {
     dispatch(setCollapseSidebar(!collapseSidebar))
-    let dom = document.querySelector("#main-content");
-    if(collapseSidebar){
-      dom.setAttribute("class", "ant-layout-content")
-        
-    }else {
-      dom.setAttribute("class", "ant-layout-content content-sider-collapse")
-    }
   }
 
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Layout} from 'antd';
 import {useSelector} from 'react-redux';
 import {Outlet} from 'react-router-dom'
@@ -8,6 +8,18 @@ import {Outlet} from 'react-router-dom'
 const Content = () => {
 
   const width = useSelector((state) => state.common.width);
+  const collapseSidebar = useSelector(state => state.setting.collapseSidebar); 
+
+  useEffect(() => {
+
+    let dom = document.querySelector("#main-content");
+    if(collapseSidebar){
+      dom.setAttribute("class", "ant-layout-content content-sider-collapse")
+    }else {
+      dom.setAttribute("class", "ant-layout-content")
+    }
+
+  }, [collapseSidebar])
 
   return (
     <Layout.Content id="main-content" 
